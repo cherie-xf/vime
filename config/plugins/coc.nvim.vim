@@ -128,7 +128,9 @@ if common#functions#HasPlug('coc-fzf')
     nnoremap <silent> <space>p  :<C-u>CocFzfListResume<CR>
 else
     " Show all diagnostics
-    nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+    "nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+    nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
+    nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
     " Manage extensions
     " nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
     nnoremap <silent> <space>o  :<C-u>CocList --auto-preview outline<cr>
@@ -140,6 +142,8 @@ else
     " nnoremap <silent> <space>s  :<C-u>CocList services<CR>
     " show coclist 早晚要放进去的
     nnoremap <silent> <space>l  :<C-u>CocList<CR>
+    nnoremap <silent> <space>g  :<C-u>CocList --normal gstatus<CR>
+
 endif
 
 " 多光标支持，但是coc的多光标不如 vim-visual-multi，因此在没有

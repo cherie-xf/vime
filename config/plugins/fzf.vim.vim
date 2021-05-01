@@ -384,6 +384,7 @@ command! -range=% -bang FzfBLinesVisual <line1>,<line2>call s:FzfBLinesVisual()
 " 自定义快捷键
 "-----------------------------------------------------------------------------
 nnoremap <M-f> :FWW<CR>
+"nnoremap <c-p> :FWW<CR>
 nnoremap <M-F> :FWW $HOME<CR>
 nnoremap <M-b> :Buffers<CR>
 if common#functions#HasPlug('vista.vim')

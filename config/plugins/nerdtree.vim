@@ -44,8 +44,31 @@ function! NERDTreeYankCurrentNode(node)
     endif
 endfunction
 
+" sync open file with NERDTree
+" " Check if NERDTree is open or active
+function! IsNERDTreeOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
+" Highlight currently open buffer in NERDTree
+autocmd BufEnter * call SyncTree()
+
 " 自定义快捷键
 map <F2> :NERDTreeFocus<CR>
+" Toggle
+"map <F3> :NERDTreeToggle<CR>
+"map <c-E> :NERDTreeToggle<CR>
+map <c-n> :NERDTreeToggle<CR>
+
 " 水平或者垂直窗口打开
 let g:NERDTreeMapOpenSplit = "w"
 let g:NERDTreeMapOpenVSplit = "W"

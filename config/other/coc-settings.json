@@ -31,6 +31,31 @@
         "value": "",
         "variable": ""
     },
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "javascriptreact",
+        "typescript.tsx",
+        "css",
+        "html",
+        "markdown",
+        "php",
+        "vue",
+        "jsx"
+    ],
+    "coc.preferences.formatOnType": true,
+    "tsserver.formatOnType": true,
+    "prettier.disableSuccessMessage": true,
+    "eslint.filetypes": [
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "javascriptreact",
+        "typescript.tsx"
+    ],
+    "eslint.autoFixOnSave": true,
     "diagnostic.errorSign": "■",
     "diagnostic.warningSign": "▲",
     "diagnostic.infoSign": "●",
