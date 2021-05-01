@@ -1,6 +1,7 @@
 let NERDTreeMinimalUI = 1 " 最小化显示，不显示问号
 let NERDTreeDirArrows = 1
 let NERDChristmasTree = 1
+let NERDTreeQuitOnOpen = 0
 
 " nerdtree的git插件
 if common#functions#HasPlug('nerdtree-git-plugin')
@@ -59,15 +60,11 @@ function! SyncTree()
   endif
 endfunction
 
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()
 
 " 自定义快捷键
-map <F2> :NERDTreeFocus<CR>
-" Toggle
-"map <F3> :NERDTreeToggle<CR>
-"map <c-E> :NERDTreeToggle<CR>
-map <c-n> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
+nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+nnoremap <silent> <leader>f :NERDTreeFind<CR>
 
 " 水平或者垂直窗口打开
 let g:NERDTreeMapOpenSplit = "w"
@@ -114,4 +111,5 @@ augroup vime_nerdtree_group
             \ 'scope': 'Node',
             \ 'override': 1,
             \ })
+
 augroup END

@@ -5,4 +5,4 @@ let g:NERDCreateDefaultMappings = 0
 map <C-m> <plug>NERDCommenterToggle
 vmap ++ <plug>NERDCommenterToggle
 " nmap <C-/> <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
+" nmap ++ <plug>NERDCommenterToggle

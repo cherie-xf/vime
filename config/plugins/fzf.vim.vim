@@ -384,9 +384,10 @@ command! -range=% -bang FzfBLinesVisual <line1>,<line2>call s:FzfBLinesVisual()
 " 自定义快捷键
 "-----------------------------------------------------------------------------
 nnoremap <M-f> :FWW<CR>
-"nnoremap <c-p> :FWW<CR>
+" nnoremap <silent> <c-p> :call fzf#Open()<cr>
 nnoremap <M-F> :FWW $HOME<CR>
 nnoremap <M-b> :Buffers<CR>
+
 if common#functions#HasPlug('vista.vim')
     let g:vista_fzf_preview = ['up:50%:wrap']
     noremap <M-t> :Vista finder<CR>
