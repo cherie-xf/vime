@@ -287,7 +287,9 @@ function! s:lc_coc_xml() abort
 endfunction
 
 function! s:lc_coc_prettier() abort
-    call coc#config('prettier.tabWidth', 4)
+    call coc#config('prettier.tabWidth', 2)
+    nmap <leader>f  <Plug>(coc-format-selected)
+    xmap <leader>f  <Plug>(coc-format-selected)
 endfunction
 
 function! s:lc_coc_vimlsp() abort

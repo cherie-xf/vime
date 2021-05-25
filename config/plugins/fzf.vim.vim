@@ -123,7 +123,6 @@ endfunction
 " TODO 还需要优化，尽量合并成一个函数，通过参数来操作
 command! -nargs=* -bang GrepWithWiki call s:RipgrepFzfWithWiki(<q-args>, <bang>0)
 command! -range=% -bang  GrepWithWikiVisual <line1>,<line2>call s:RipgrepFzfWithWikiVisual(<bang>0)
-
 "-----------------------------------------------------------------------------
 " 文件检索
 "-----------------------------------------------------------------------------
@@ -387,6 +386,9 @@ nnoremap <M-f> :FWW<CR>
 " nnoremap <silent> <c-p> :call fzf#Open()<cr>
 nnoremap <M-F> :FWW $HOME<CR>
 nnoremap <M-b> :Buffers<CR>
+nnoremap <M-g> :GFiles<CR>
+nnoremap <M-P> :FWW $HOME/work/projects/<CR>
+nnoremap <M-S> :FWW $HOME/work/build/fmdev-7.2/root/<CR>
 
 if common#functions#HasPlug('vista.vim')
     let g:vista_fzf_preview = ['up:50%:wrap']

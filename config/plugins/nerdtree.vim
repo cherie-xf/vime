@@ -64,7 +64,7 @@ endfunction
 " 自定义快捷键
 map <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
-nnoremap <silent> <leader>f :NERDTreeFind<CR>
+nnoremap <silent> <leader>n :NERDTreeFind<CR>
 
 " 水平或者垂直窗口打开
 let g:NERDTreeMapOpenSplit = "w"

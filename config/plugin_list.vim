@@ -15,7 +15,9 @@ Plug 'tpope/vim-fugitive', {'on': ['Gwrite', 'Gcommit', 'Gread', 'Gdiff', 'Gblam
 "   Plug 'f-person/git-blame.nvim'
 "endif
 " 注释插件
-Plug 'scrooloose/nerdcommenter'
+" 'gc' to toggle comment
+Plug 'tomtom/tcomment_vim'
+" Plug 'scrooloose/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
@@ -131,7 +133,7 @@ Plug 'rbgrouleff/bclose.vim', {'on': 'Bclose'}
 "Plug 'lervag/vimtex', {'for': 'tex'}
 "Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 " 平滑滚动
-"Plug 'psliwka/vim-smoothie'
+Plug 'psliwka/vim-smoothie'
 " 在命令行使用linux命令新建文件文件夹重命名当前buffer等
 "Plug 'tpope/vim-eunuch', {'on': ['Mkdir', 'Rename', 'Unlink', 'Delete', 'Move', 'Chmod', 'Cfind', 'Clocate', 'Lfine', 'Llocate', 'SudoEdit', 'SudoWrite', 'Wall', 'W']}
 " 最大化窗口，ctrl w o
@@ -148,7 +150,11 @@ Plug 'troydm/zoomwintab.vim', {'on': 'ZoomWinTabToggle'}
 "    Plug 'octol/vim-cpp-enhanced-highlight'
 "endif
 " 总是匹配tag
-"Plug 'valloric/MatchTagAlways', {'for': ['html', 'css', 'xml']}
+Plug 'valloric/MatchTagAlways', {'for': ['html', 'css', 'xml']}
+Plug 'norcalli/nvim-colorizer.lua'
+" provides support for expanding abbreviations similar to emmet
+Plug 'mattn/emmet-vim'
+
 " 显示颜色 例如: #654456
 "if has('nvim')
 "    Plug 'norcalli/nvim-colorizer.lua'
@@ -188,7 +194,9 @@ Plug 'tyru/open-browser.vim'
 "Plug 'ernstwi/vim-secret'
 "Bookmark
 Plug 'MattesGroeger/vim-bookmarks'
-
+"accelerate (j and k)
+Plug 'rhysd/accelerated-jk'
+"
 " coc插件列表，可根据需要进行删减
 let g:coc_global_extensions = [
     \ 'coc-git',
@@ -198,6 +206,7 @@ let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-html',
     \ 'coc-json',
+    \ 'coc-vetur',
     \ 'coc-python',
     \ 'coc-lists',
     \ 'coc-just-complete']
